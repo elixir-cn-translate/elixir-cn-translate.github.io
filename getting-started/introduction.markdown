@@ -1,6 +1,6 @@
 ---
 layout: getting-started
-title: Introduction
+title: 简介
 redirect_from: /getting_started/1.html
 ---
 
@@ -8,30 +8,30 @@ redirect_from: /getting_started/1.html
 
 {% include toc.html %}
 
-Welcome!
+欢迎！
 
-In this tutorial we are going to teach you the Elixir foundation, the language syntax, how to define modules, how to manipulate the characteristics of common data structures, and more. This chapter will focus on ensuring Elixir is installed and that you can successfully run Elixir's Interactive Shell, called IEx.
+通过这个教程你会领略到 Elixir 的基础，语言的语法，怎么样去定义一个模块，怎么样操作常见的数据结构等等。本章内容着重于确保你安装完成 Elixir 并能成功运行 Elixir 的交互命令行：IEx。
 
-Our requirements are:
+我们所需要的是：
 
-  * Elixir - Version 1.4.0 onwards
-  * Erlang - Version 18.0 onwards
+  * Elixir - 版本 1.4.0 或更高
+  * Erlang - 版本 18.0 或更高
 
-Let's get started!
+让我们开始吧！
 
-> If you find any errors in the tutorial or on the website, [please report a bug or send a pull request to our issue tracker](https://github.com/elixir-lang/elixir-lang.github.com).
+> 如果你在教程或网站上发现了任何问题，[请给我们提 PR 或者报 Bug](https://github.com/elixir-cn-translate/elixir-cn-translate.github.io)。
 
-## Installation
+## 安装
 
-If you still haven't installed Elixir, run to our [installation page](/install.html). Once you are done, you can run `elixir --version` to get the current Elixir version.
+如果你还没有安装 Elixir ，请访问我们的[安装页面](/install.html)。安装完成后你可以运行 `elixir --version` 来查看当前 Elixir 的版本。
 
-## Interactive mode
+## 交互模式
 
-When you install Elixir, you will have three new executables: `iex`, `elixir` and `elixirc`. If you compiled Elixir from source or are using a packaged version, you can find these inside the `bin` directory.
+当你安装 Elixir ，你会得到三个新的命令：`iex` ，`elixir` ，`elixirc` 。如果你是通过源码编译或者打包好的 Elixir 来安装，你能在 `bin` 目录里找到这几个命令。
 
-For now, let's start by running `iex` (or `iex.bat` if you are on Windows) which stands for Interactive Elixir. In interactive mode, we can type any Elixir expression and get its result. Let's warm up with some basic expressions.
+现在让我们开始，运行 `iex` (如果在 Windows 上就是 `iex.bat`)。在交互模式中，我们可以输入任何 Elixir 表达式并得到结果。让我们通过几个简单的表达式来热个身：
 
-Open up `iex` and type the following expressions:
+运行 `iex` 并输入下面的表达式：
 
 ```iex
 Erlang/OTP 19 [erts-8.1] [source] [64-bit] [smp:4:4] [async-threads:10] [hipe] [kernel-poll:false] [dtrace]
@@ -43,40 +43,40 @@ iex(2)> "hello" <> " world"
 "hello world"
 ```
 
-Please note that some details like version numbers may differ a bit in your session, that's not important. From now on `iex` sessions will be stripped down to focus on the code. To exit `iex` press `Ctrl+C` twice.
+请注意一些细节比如版本号之类的可能会跟你电脑上显示的不一样，请不要在意。从现在开始我们在 `iex` 界面里只专注于代码。要想退出 `iex` 按两次 `Ctrl+C` 就行。
 
-It seems we are ready to go! We will use the interactive shell quite a lot in the next chapters to get a bit more familiar with the language constructs and basic types, starting in the next chapter.
+看起来我们已经准备好继续了！从下一章开始我们会非常频繁的使用交互命令行，来学习语言的更多方面。
 
-> Note: if you are on Windows, you can also try `iex.bat --werl` which may provide a better experience depending on which console you are using.
+> 注意：如果你用的是 Windows ，你可以试试 `iex.bat --wel` 命令，取决于你使用的控制台，这个命令有可能给你提供更好的使用体验。
 
-## Running scripts
+## 运行脚本
 
-After getting familiar with the basics of the language you may want to try writing simple programs. This can be accomplished by putting the following Elixir code into a file:
+在对语言的基础熟悉了之后，你可能想写点儿简单的程序。可以把下面的 Elixir 代码放到一个文件里：
 
 ```elixir
 IO.puts "Hello world from Elixir"
 ```
 
-Save it as `simple.exs` and execute it with `elixir`:
+保存为 `simple.exs` 并通过 `elixir` 命令来运行：
 
 ```bash
 $ elixir simple.exs
 Hello world from Elixir
 ```
 
-Later on we will learn how to compile Elixir code (in [Chapter 8](/getting-started/modules-and-functions.html)) and how to use the Mix build tool (in the [Mix & OTP guide](/getting-started/mix-otp/introduction-to-mix.html)). For now, let's move on to [Chapter 2](/getting-started/basic-types.html).
+之后我们会学习如何编译 Elixir 代码（[第8章](/getting-started/modules-and-functions.html)）。如何使用构建工具 Mix （[Mix & OTP 指南](/getting-started/mix-otp/introduction-to-mix.html)）。现在让我们移步到[第2章](/getting-started/basic-types.html)。
 
-## Asking questions
+## 有问题要问
 
-When going through this getting started guide, it is common to have questions, after all, that is part of the learning process! There are many places you could ask them to learn more about Elixir:
+在学习指南的过程中，通常会产生一些问题，毕竟这也是学习的一部分嘛！下面是一些你可以提问并学到更多 Elixir 知识的地方：
 
   * [#elixir-lang on freenode IRC](irc://irc.freenode.net/elixir-lang)
   * [Elixir on Slack](https://elixir-slackin.herokuapp.com/)
   * [Elixir Forum](http://elixirforum.com)
   * [elixir tag on StackOverflow](https://stackoverflow.com/questions/tagged/elixir)
 
-When asking questions, remember these two tips:
+当你提问的时候，记住下面两个忠告：
 
-  * Instead of asking "how to do X in Elixir", ask "how to solve Y in Elixir". In other words, don't ask how to implement a particular solution, instead describe the problem at hand. Stating the problem gives more context and less bias for a correct answer.
+  * 不要问诸如“用 Elixir 怎么做 X”，而是问“如何用 Elixir 解决 Y”。换句话说，不要问如何实现一个具体的解决方案，而是描述问题的本质。描述问题的时候要不带偏见的给出足够的上下文，这有助于你得到正确答案。
 
-  * In case things are not working as expected, please include as much information as you can in your report, for example: your Elixir version, the code snippet and the error message alongside the error stacktrace. Use sites like [Gist](https://gist.github.com/) to paste this information.
+  * 当情况不像期待的那样运行良好，在你上报问题的时候请尽可能多的提供相关信息，比如：你的 Elixir 版本，报错信息或堆栈追踪信息。可以使用 [Gist](https://gist.github.com/) 等网站粘贴这些信息。

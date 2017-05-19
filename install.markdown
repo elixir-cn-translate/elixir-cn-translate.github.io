@@ -1,5 +1,5 @@
 ---
-title: "Installing Elixir"
+title: "安装 Elixir"
 section: install
 layout: default
 ---
@@ -9,119 +9,118 @@ layout: default
 
 {% include toc.html %}
 
-The quickest way to install Elixir is through a distribution or using one of the available installers. If not available, then we recommend the precompiled packages or compiling it.
+安装 Elixir 最快的方法是通过发行版或使用其中一个可用的安装程序。如果发行版和安装程序都不可用，那么我们建议使用预编译包或者手动编译。
 
-Note Elixir requires Erlang 18.0 or later. Many of the instructions below will automatically install Erlang for you. In case they do not, read the "Installing Erlang" section below.
+注意，Elixir 需要 Erlang 18.0 或更高版本。 下面的很多说明将会为你自动安装 Erlang。 如果没有，请阅读下面的 “安装 Erlang” 部分。
 
-## Distributions
+## 发行版
 
-The preferred option for installing Elixir. Choose your operating system and tool.
+安装 Elixir 的首选方案。 选择你的操作系统和工具。
 
-If your distribution contains an old Elixir/Erlang version, see the sections below for installing Elixir/Erlang from version managers or from source.
+如果你的发行版包含旧的 Elixir/Erlang 版本，请参阅下面的部分从版本管理器或源码安装 Elixir/Erlang。
 
-### Mac OS X
+### macOS
 
   * Homebrew
-    * Update your homebrew to latest: `brew update`
-    * Run: `brew install elixir`
+    * 更新你的 homebrew 到最新版：`brew update`
+    * 运行：`brew install elixir`
   * Macports
-    * Run: `sudo port install elixir`
+    * 运行：`sudo port install elixir`
 
 ### Unix (and Unix-like)
 
-  * Arch Linux (Community repo)
-    * Run: `pacman -S elixir`
-  * openSUSE (and SLES 11 SP3+)
-    * Add Erlang devel repo: `zypper ar -f http://download.opensuse.org/repositories/devel:/languages:/erlang/openSUSE_Factory/ erlang`
-    * Run: `zypper in elixir`
+  * Arch Linux（社区仓库）
+    * 运行：`pacman -S elixir`
+  * openSUSE（以及 SUSE 企业版 11 SP3+）
+    * 添加 Erlang 开发仓库：`zypper ar -f http://download.opensuse.org/repositories/devel:/languages:/erlang/openSUSE_Factory/ erlang`
+    * 运行：`zypper in elixir`
   * Gentoo
-    * Run: `emerge --ask dev-lang/elixir`
+    * 运行：`emerge --ask dev-lang/elixir`
   * GNU Guix
-    * Run: `guix package -i elixir`
-  * Fedora 21 (and older)
-    * Run: `yum install elixir`
-  * Fedora 22 (and newer)
-    * Run `dnf install elixir`
+    * 运行：`guix package -i elixir`
+  * Fedora 21（以及更老的版本）
+    * 运行：`yum install elixir`
+  * Fedora 22（以及更新的版本）
+    * 运行：`dnf install elixir`
   * FreeBSD
-    * From ports: `cd /usr/ports/lang/elixir && make install clean`
-    * From pkg: `pkg install elixir`
-  * Ubuntu 12.04/14.04/16.04 or Debian 7
-    * Add Erlang Solutions repo: `wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb`
-    * Run: `sudo apt-get update`
-    * Install the Erlang/OTP platform and all of its applications: `sudo apt-get install esl-erlang`
-    * Install Elixir: `sudo apt-get install elixir`
+    * 通过 ports：`cd /usr/ports/lang/elixir && make install clean`
+    * 通过 pkg：`pkg install elixir`
+  * Ubuntu 12.04/14.04/16.04 或者 Debian 7
+    * 添加 Erlang Solutions 仓库：`wget https://packages.erlang-solutions.com/erlang-solutions_1.0_all.deb && sudo dpkg -i erlang-solutions_1.0_all.deb`
+    * 运行：`sudo apt-get update`
+    * 安装 Erlang/OTP 平台及其所有应用程序：`sudo apt-get install esl-erlang`
+    * 安装 Elixir：`sudo apt-get install elixir`
 
 ### Windows
 
-  * Web installer
-    * [Download the installer](https://repo.hex.pm/elixir-websetup.exe)
-    * Click next, next, ..., finish
+  * Web 安装程序
+    * [下载安装程序](https://repo.hex.pm/elixir-websetup.exe)
+    * 点击下一个，下一个...完成
   * Chocolatey
     * `cinst elixir`
 
 ### Raspberry Pi
 
-If necessary replace "jessie" with the name of your Raspian release.   
+如果需要，使用你 Raspbian 版本的名称替换 “jessie”。
 
-  * The Erlang Solutions repository has a prebuilt package for armhf.  
-    This saves significant time instead of recompiling natively.  
+  * Erlang Solutions 仓库有用于 armhf 的预构建软件包。这相比本地重新编译节省了大量的时间。
 
-  * Get Erlang key   
+  * 获取 Erlang 钥匙
 
-    * `echo "deb http://packages.erlang-solutions.com/debian jessie contrib" | sudo tee /etc/apt/sources.list.d/erlang-solutions.list`    
-    * Run: `wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc`  
-    * Add to keychain: `sudo apt-key add erlang_solutions.asc`   
+    * `echo "deb http://packages.erlang-solutions.com/debian jessie contrib" | sudo tee /etc/apt/sources.list.d/erlang-solutions.list`
+    * 运行：`wget http://packages.erlang-solutions.com/debian/erlang_solutions.asc`
+    * 添加到钥匙扣：`sudo apt-key add erlang_solutions.asc`
 
-  * Install Elixir
-    * Update apt to latest: `sudo apt update`     
-    * Run: `sudo apt install elixir`   
+  * 安装 Elixir
+    * 更新 apt 到最新版：`sudo apt update`
+    * 运行：`sudo apt install elixir`
 
 ### Docker
 
-If you are familiar with Docker you can use the official Docker image to get started quickly with Elixir.
+如果你熟悉 Docker，你可以使用官方 Docker 镜像快速开始使用 Elixir。
 
-  * Enter interactive mode
-    * Run: `docker run -it --rm elixir`
-  * Enter bash within container with installed `elixir`
-    * Run: `docker run -it --rm elixir bash`
+  * 进入交互模式
+    * 运行：`docker run -it --rm elixir`
+  * 在安装有 `elixir` 的容器内进入 Bash
+    * 运行：`docker run -it --rm elixir bash`
 
-Those distributions will likely install Erlang automatically for you too. In case they don't, check the [Installing Erlang](/install.html#installing-erlang) section below.
+这些发行版有可能也会自动为你安装 Erlang。 如果没有，请检查下面的 [安装 Erlang](/install.html#erlang) 部分。
 
 ### Nanobox
 
-For developers using [Nanobox](https://nanobox.io), simply specify the `elixir` engine in your `boxfile.yml` and `nanobox run`.
+对于使用 [Nanobox](https://nanobox.io) 的开发人员，只需在 `boxfile.yml` 中指定 `elixir` 引擎并执行 `nanobox run` 即可。
 
 ```yaml
 run.config:
   engine: elixir
 ```
 
-## Precompiled package
+## 预编译包
 
-Elixir provides a precompiled package for every release. First [install Erlang](/install.html#installing-erlang) and then download and unzip the [Precompiled.zip file for the latest release](https://github.com/elixir-lang/elixir/releases/download/v{{ stable.version }}/Precompiled.zip).
+Elixir 为每个版本提供了一个预编译的包。首先安装 Erlang，然后下载并解压缩 [最新版本的 Precompiled.zip 文件](https://github.com/elixir-lang/elixir/releases/download/v{{ stable.version }}/Precompiled.zip)。
 
-Once the release is unpacked, you are ready to run the `elixir` and `iex` commands from the `bin` directory, but we recommend you to [add Elixir's bin path to your PATH environment variable](#setting-path-environment-variable) to ease development.
+一旦解压缩完成，你就可以从 `bin` 目录运行 `elixir` 和 `iex` 命令，但是我们建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#path-) 以简化开发。
 
-## Compiling with version managers
+## 使用版本管理器进行编译
 
-There are many tools that allow developers to install and manage multiple Erlang and Elixir versions. They are useful if you can't install Erlang or Elixir as mentioned above or if your package manager is simply outdated. Here are some of those tools:
+有很多工具允许开发人员安装和管理多个 Erlang 和 Elixir 版本。如果你不能如上所述安装 Erlang 或 Elixir，或者你的软件包管理器已经过时，它们将非常有用。以下是其中的一些工具：
 
-  * [asdf](https://github.com/asdf-vm/asdf) - install and manage different Elixir and Erlang versions
-  * [exenv](https://github.com/mururu/exenv) - install and manage different Elixir versions
-  * [kiex](https://github.com/taylor/kiex) - install and manage different Elixir versions
-  * [kerl](https://github.com/yrashk/kerl) - install and manage different Erlang versions
+  * [asdf](https://github.com/asdf-vm/asdf) - 安装和管理不同的 Elixir 和 Erlang 版本
+  * [exenv](https://github.com/mururu/exenv) - 安装和管理不同的 Elixir 版本
+  * [kiex](https://github.com/taylor/kiex) - 安装和管理不同的 Elixir 版本
+  * [kerl](https://github.com/yrashk/kerl) - 安装和管理不同的 Erlang 版本
 
-If you would prefer to compile from source manually, don't worry, we got your back too!
+如果你更希望手动从源码编译，不用担心，我们也将为你提供指导！
 
-## Compiling from source (Unix and MinGW)
+## 从源码编译 (Unix and MinGW)
 
-You can download and compile Elixir in few steps. The first one is to [install Erlang](/install.html#installing-erlang).
+你需要几个步骤来下载和编译 Elixir。 第一步是 [安装 Erlang](/install.html#erlang)。
 
-Next you should download source code ([.zip](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.zip), [.tar.gz](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.tar.gz)) of the [latest release](https://github.com/elixir-lang/elixir/releases/tag/v{{ stable.version }}), unpack it and then run `make` inside the unpacked directory (note: if you are running on Windows, [read this page on setting up your environment for compiling Elixir](https://github.com/elixir-lang/elixir/wiki/Windows)).
+接下来，你应该下载 [最新版本](https://github.com/elixir-lang/elixir/releases/tag/v{{ stable.version }}) 的源码（[.zip](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.zip)、[.tar.gz](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.tar.gz)），解压缩，然后在解压缩后的目录中运行 `make`（注意：如果你在 Windows 上运行，[请阅读此页面设置你的编译环境](https://github.com/elixir-lang/elixir/wiki/Windows)）。
 
-After compiling, you are ready to run the elixir and `iex` commands from the bin directory. It is recommended that you [add Elixir's bin path to your PATH environment variable](#setting-path-environment-variable) to ease development.
+编译后，你可以从 `bin` 目录运行 `elixir` 和 `iex` 命令。建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#path-) 以简化开发。
 
-In case you are feeling a bit more adventurous, you can also compile from master:
+如果你想冒险一点，你也可以从主分支编译：
 
 ```bash
 $ git clone https://github.com/elixir-lang/elixir.git
@@ -129,32 +128,32 @@ $ cd elixir
 $ make clean test
 ```
 
-If the tests pass, you are ready to go. Otherwise, feel free to open an issue [in the issues tracker on Github](https://github.com/elixir-lang/elixir).
+如果测试通过，你就准备好了。否则，请随时在 [Github 的问题跟踪器](https://github.com/elixir-lang/elixir) 中提出问题。
 
-## Installing Erlang
+## 安装 Erlang
 
-The only prerequisite for Elixir is Erlang, version 18.0 or later, which can be easily installed with [Precompiled packages](https://www.erlang-solutions.com/resources/download.html). In case you want to install it directly from source, it can be found on [the Erlang website](http://www.erlang.org/download.html) or by following the excellent tutorial available in the [Riak documentation](https://docs.basho.com/riak/latest/ops/building/installing/erlang/).
+Elixir 唯一的先决条件是 Erlang，18.0 或更高版本，可以轻松地使用 [预编译包](https://www.erlang-solutions.com/resources/download.html) 安装。如果你想直接从源码安装，可以在 [Erlang 官网](http://www.erlang.org/download.html) 上找到，或者依照 [Riak 文档](https://docs.basho.com/riak/latest/ops/building/installing/erlang/) 中提供的优秀教程。
 
-For Windows developers, we recommend the precompiled packages. Those on a Unix platform can probably get Erlang installed via one of the many package distribution tools.
+对于 Windows 开发人员，我们建议使用预编译包。那些在 Unix 平台上的或许可以通过许多软件包分发工具之一来安装 Erlang。
 
-After Erlang is installed, you should be able to open up the command line (or command prompt) and check the Erlang version by typing `erl`. You will see some information as follows:
+安装 Erlang 后，你应该可以打开命令行（或命令提示符），并通过键入 `erl` 来检查 `Erlang` 版本。你会看到一些信息如下：
 
     Erlang/OTP 18 (erts-7) [64-bit] [smp:2:2] [async-threads:0] [hipe] [kernel-poll:false]
 
-Notice that depending on how you installed Erlang, Erlang binaries might not be available in your PATH. Be sure to have Erlang binaries in your [PATH](https://en.wikipedia.org/wiki/Environment_variable), otherwise Elixir won't work!
+注意，这取决于你如何安装 Erlang，Erlang 可执行文件也许不在你的 PATH 中。确保在你的 [PATH](https://en.wikipedia.org/wiki/Environment_variable) 中有 Erlang 可执行文件，否则 Elixir 将无法工作！
 
-## Setting PATH environment variable
+## 设置 PATH 环境变量
 
-It is highly recommended to add Elixir's bin path to your PATH environment variable to ease development.
+强烈建议将 Elixir 的 bin 路径添加到 PATH 环境变量中以简化开发。
 
-On **Windows**, there are [instructions for different versions](http://www.computerhope.com/issues/ch000549.htm) explaining the process.
+在 **Windows** 上，有 [不同版本的说明](http://www.computerhope.com/issues/ch000549.htm) 解释这个过程。
 
-On **Unix systems**, you need to [find your shell profile file](https://unix.stackexchange.com/a/117470/101951), and then add to the end of this file the following line reflecting the path to your Elixir installation:
+在 **Unix 系统** 上，你需要 [找到你的 Shell 配置文件](https://unix.stackexchange.com/a/117470/101951)，然后将下面这行添加到这个配置文件的末尾，以反映你的 Elixir 安装路径：
 
 ```bash
 export PATH="$PATH:/path/to/elixir/bin"
 ```
 
-## Checking the installed version of Elixir
+## 检查安装的 Elixir 版本
 
-Once you have Elixir installed, you can check its version by running `elixir --version`.
+一旦安装了 Elixir，你就可以通过运行 `elixir -version` 来检查它的版本。

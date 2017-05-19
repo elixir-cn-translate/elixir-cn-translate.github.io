@@ -84,7 +84,7 @@ layout: default
   * 在安装有 `elixir` 的容器内进入 Bash
     * 运行：`docker run -it --rm elixir bash`
 
-这些发行版有可能也会自动为你安装 Erlang。 如果没有，请检查下面的 [安装 Erlang](/install.html#erlang) 部分。
+这些发行版有可能也会自动为你安装 Erlang。 如果没有，请检查下面的 [安装 Erlang](/install.html#安装-erlang) 部分。
 
 ### Nanobox
 
@@ -99,7 +99,7 @@ run.config:
 
 Elixir 为每个版本提供了一个预编译的包。首先安装 Erlang，然后下载并解压缩 [最新版本的 Precompiled.zip 文件](https://github.com/elixir-lang/elixir/releases/download/v{{ stable.version }}/Precompiled.zip)。
 
-一旦解压缩完成，你就可以从 `bin` 目录运行 `elixir` 和 `iex` 命令，但是我们建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#path-) 以简化开发。
+一旦解压缩完成，你就可以从 `bin` 目录运行 `elixir` 和 `iex` 命令，但是我们建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#设置-path-环境变量) 以简化开发。
 
 ## 使用版本管理器进行编译
 
@@ -114,11 +114,11 @@ Elixir 为每个版本提供了一个预编译的包。首先安装 Erlang，然
 
 ## 从源码编译 (Unix and MinGW)
 
-你需要几个步骤来下载和编译 Elixir。 第一步是 [安装 Erlang](/install.html#erlang)。
+你需要几个步骤来下载和编译 Elixir。 第一步是 [安装 Erlang](/install.html#安装-erlang)。
 
 接下来，你应该下载 [最新版本](https://github.com/elixir-lang/elixir/releases/tag/v{{ stable.version }}) 的源码（[.zip](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.zip)、[.tar.gz](https://github.com/elixir-lang/elixir/archive/v{{ stable.version }}.tar.gz)），解压缩，然后在解压缩后的目录中运行 `make`（注意：如果你在 Windows 上运行，[请阅读此页面设置你的编译环境](https://github.com/elixir-lang/elixir/wiki/Windows)）。
 
-编译后，你可以从 `bin` 目录运行 `elixir` 和 `iex` 命令。建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#path-) 以简化开发。
+编译后，你可以从 `bin` 目录运行 `elixir` 和 `iex` 命令。建议你 [将 Elixir 的 bin 路径添加到 PATH 环境变量中](#设置-path-环境变量) 以简化开发。
 
 如果你想冒险一点，你也可以从主分支编译：
 

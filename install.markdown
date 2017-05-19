@@ -156,4 +156,4 @@ export PATH="$PATH:/path/to/elixir/bin"
 
 ## 检查安装的 Elixir 版本
 
-一旦安装了 Elixir，你就可以通过运行 `elixir -version` 来检查它的版本。
+一旦安装了 Elixir，你就可以通过运行 `elixir --version` 来检查它的版本。
